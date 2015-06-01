@@ -15,10 +15,12 @@ $(document).ready(function() {
 	$(window).resize(function() {
 
 		responsivenavNeed();
-		getHeadHeaderAndPostionHeadText()
+		getHeadHeaderAndPostionHeadText();
 		$('.scroll-hover').css({'left': $('.main-nav').outerWidth() - 40 + "px"});
 
 	});
+
+	getScrollToTopBtn();
 
 
 	$(document).scroll( function() {
@@ -33,6 +35,9 @@ $(document).ready(function() {
 			makeResponsiveNav("responsivenav_not_need");
 
 		}
+
+
+		getScrollToTopBtn();
 
 
 	
@@ -79,8 +84,8 @@ $(document).ready(function() {
 
 
 	
-//  Опреджеление высоты менб при клике на "MENU"
-	$(".mobile-nav-icon").click(function() {
+//  Опреджеление высоты меню при клике на "MENU"
+	$(".logo, .mobile-nav-icon").click(function() {
 		
 		$('.logo-nav-box').append("<div class='scroll-hover'></div>");
 
@@ -220,6 +225,32 @@ $(document).ready(function() {
 			}
 		});
 	});
+
+
+	function getScrollToTopBtn() {
+		if ($(window).scrollTop() > $('.header').height() ) {
+
+        	$('.scroll-to-top').fadeIn();
+
+        } else {
+
+            $('.scroll-to-top').fadeOut();
+
+        }
+	}
+
+ 
+    $('.scroll-to-top').click(function () {
+
+        $('body,html').animate({
+
+            scrollTop: 0
+
+        }, 1700);
+
+        return false;
+
+    });
 
 
 });

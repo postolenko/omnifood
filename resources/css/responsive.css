@@ -211,6 +211,10 @@
 
 @media only screen and (max-width: 580px) { 
 
+	.hero-text {
+		text-align: center;
+	}
+
 	.steps-box:first-child {
 		width: 100%;
 		padding-right: 0;
