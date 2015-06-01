@@ -222,9 +222,6 @@ $(document).ready(function() {
 	});
 
 
-
-console.log($('.app-screen').width());
-
 });
 
 
