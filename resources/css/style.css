@@ -138,8 +138,7 @@ h3 {
     text-align: center;
     color: #e67e22;
     font-size: 120%;
-    margin-right: 10px;
-    
+    margin-right: 10px;    
     line-height: 120%;
     vertical-align: middle;
     margin-top: -4px;
@@ -149,15 +148,15 @@ h3 {
 
 a:link,
 a:visited {
-    color: #e67e22;
+    color: #555;
     text-decoration: none;
     padding-bottom: 1px;
     transition: color 0.2s;
 }
 
 a:hover,
-a:active {
-    color: #555;
+a:active {   
+    color: #e67e22;
 }
 
 /* ------- BUTTONS -------- */
@@ -217,16 +216,17 @@ input[type=submit] {
 /*-------------------------------------------*/
 
 header {
-    background-image: url(img/hero.jpg);
+    background-image: url(../img/hero.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    height: 100vh;
-    padding: 0 0 30px 0;   
+    min-height: 100%;
+    max-height: auto;
+  
 }
 
 .head {
-    height: 100vh; 
+    min-height: 100%;
     background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjciLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjciLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
     background: -moz-linear-gradient(left, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.7) 100%);
     background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,0.7)), color-stop(100%,rgba(0,0,0,0.7)));
@@ -234,8 +234,8 @@ header {
     background: -o-linear-gradient(left, rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.7) 100%);
     background: -ms-linear-gradient(left, rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.7) 100%);
     background: linear-gradient(to right, rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.7) 100%);
+    padding: 0 0 140px 0;
 }
-
 
 /*Конечно можно было бы написать так */
 /*
@@ -269,11 +269,18 @@ header {
     Если Вы знаете как лучше решить этот вопрос то позвоните +3 80 97 790 61 37. 
 */
 
+.logo-box {
+    width: 20%;
+    height: auto;
+    vertical-align: top;
+    float: left;
+}
+
 .logo {
     height: 100px;
     width: auto;
-    float: left;
-    margin-top: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 .logo-black {
@@ -285,84 +292,85 @@ header {
 }
 
 
-.hero-text {
-    position: relative;
-}
-
-
 /* Main navigation */
+.nav-position {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 9;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjciLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjciLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
+    background: -moz-linear-gradient(left, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.9) 100%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,0.9)), color-stop(100%,rgba(0,0,0,0.9)));
+    background: -webkit-linear-gradient(left, rgba(0,0,0,0.9) 0%,rgba(0,0,0,0.9) 100%);
+    background: -o-linear-gradient(left, rgba(0,0,0,0.9) 0%,rgba(0,0,0,0.9) 100%);
+    background: -ms-linear-gradient(left, rgba(0,0,0,0.9) 0%,rgba(0,0,0,0.9) 100%);
+    background: linear-gradient(to right, rgba(0,0,0,0.9) 0%,rgba(0,0,0,0.9) 100%);
+    overflow: hidden;
+}
 
 .main-nav {
-    display: block;
-    float: right;
     list-style: none;
-    margin-top: 55px;
+    margin-top: 0px;
+    float: right;
+    z-index: 8;
+    width: 80%;
+ }
+
+.scroll-hover {
+    position: absolute;
+    width: 100%;
+    background: #111;
+    z-index: 1;
 }
 
-.main-nav li {
+.main-nav a {
     display: inline-block;
-    vertical-align: middle;
-    margin-left: 40px;
+    vertical-align: top;
+    width: 45%;
 }
 
-.main-nav li a:link,
-.main-nav li a:visited{
-    padding: 8px 0;
+.main-nav a:link,
+.main-nav a:visited{
+    padding: 7px;
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 100%;
-    border-bottom: 2px solid transparent;
-    transition: border-bottom 0.2s;
+    background: none;
 }
 
-.main-nav li a:hover,
-.main-nav li a:active {
-    border-bottom: 2px solid #e67e22;
+.main-nav a:hover,
+.main-nav a:active {
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2U2N2UyMiIgc3RvcC1vcGFjaXR5PSIwLjkiLz4KICAgIDxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSIjZTY3ZTIyIiBzdG9wLW9wYWNpdHk9IjAuNyIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZTY3ZTIyIiBzdG9wLW9wYWNpdHk9IjAuNSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(left,  rgba(230,126,34,0.9) 0%, rgba(230,126,34,0.7) 50%, rgba(230,126,34,0.5) 100%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(230,126,34,0.9)), color-stop(50%,rgba(230,126,34,0.7)), color-stop(100%,rgba(230,126,34,0.5)));
+    background: -webkit-linear-gradient(left,  rgba(230,126,34,0.9) 0%,rgba(230,126,34,0.7) 50%,rgba(230,126,34,0.5) 100%);
+    background: -o-linear-gradient(left,  rgba(230,126,34,0.9) 0%,rgba(230,126,34,0.7) 50%,rgba(230,126,34,0.5) 100%);
+    background: -ms-linear-gradient(left,  rgba(230,126,34,0.9) 0%,rgba(230,126,34,0.7) 50%,rgba(230,126,34,0.5) 100%);
+    background: linear-gradient(to right,  rgba(230,126,34,0.9) 0%,rgba(230,126,34,0.7) 50%,rgba(230,126,34,0.5) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6e67e22', endColorstr='#80e67e22',GradientType=1 );
 }
 
 /* Mobile navigation */
 
 .mobile-nav-icon {
     float: right;
-    margin-top: 30px;
+    margin-top: 20px;
     cursor: pointer;
     display: none;
-}
-
-.mobile-nav-icon i {
-    font-size: 200%;
     color: #fff;
 }
 
-/* Sticky navigation */
-
-.sticky {
-    position: fixed;
-    z-index: 9999;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.98);
-    box-shadow: 0 2px 2px #efefef;
+.mobile-nav-icon:link,
+.mobile-nav-icon:visited {
+    color: #e67e22;
+    text-decoration: none;
+    transition: color 0.2s;
 }
 
-.sticky .main-nav {
-    margin-top: 18px;
-}
-
-.sticky .main-nav li a:link,
-.sticky .main-nav li a:visited{
-    padding: 15px 0;
-    color: #555;
-}
-
-.sticky .logo {
-    display: none;
-}
-
-.sticky .logo-black {
-    display: block;
+.mobile-nav-icon:hover,
+.mobile-nav-icon:active {   
+    color: #e67e22;
 }
 
 
@@ -377,7 +385,6 @@ header {
 .section-features .row .col {
     width: 24.6%;
 }
-
 
 /*-------------------------------------------*/
 /* MEALS */
@@ -417,8 +424,8 @@ header {
 
 .meal-photo img:hover{
     opacity: 1;
-    -webkit-transform: scale(1.04);
-    transform: scale(1.04);
+    -webkit-transform: scale(1.08);
+    transform: scale(1.08);
 }
 
 /*-------------------------------------------*/
@@ -522,7 +529,7 @@ header {
 /*-------------------------------------------*/
 
 .section-testimonials {
-    background-image: url(img/back-customers.jpg) ;
+    background-image: url(../img/back-customers.jpg) ;
     background-repeat: repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -541,10 +548,6 @@ header {
     background: linear-gradient(to right, rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.7) 100%);
     margin: 0;
     padding-bottom: 20px;
-}
-
-.section-testimonials .row {
-    padding: 0px;
 }
 
 .section-testimonials .col {
@@ -795,3 +798,36 @@ footer p {
     margin-top: 30px;
 }
 
+.copyright-link {
+    margin-left: 10px; 
+}
+
+.copyright-link:link,
+.copyright-link:visited {
+    color: #e67e22;
+    text-decoration: none;
+    padding-bottom: 1px;
+    transition: color 0.2s;
+}
+
+.copyright-link:hover,
+.copyright-link:active {   
+     color: #fff;
+}
+
+
+
+/*
+    Я скрыл конетент который выходит за пределы окна браузера при загрузке. 
+    Если пользователь будет находиться к примеру по середине всей страницы, загружена будет только верхняя часть контента сайта,
+    а нижняя от нижнего края окна браузера будет не загруженой.
+    Если пользователь первый раз зашел на сайт или выполнил перезагрузку страницы находясь до этого в header, весь нижний коненте сайта в невидимой для пользователя области загружен не будет.
+*/
+.section-features .row:last-child,
+.section-steps .row:last-child,
+.section-cities .row:last-child,
+.testimonials, 
+.section-plans .row:last-child,
+.section-form .row:last-child {
+    opacity : 0; 
+}
