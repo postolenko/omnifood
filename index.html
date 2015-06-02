@@ -4,22 +4,23 @@
 <head>
   <meta charset="utf-8">
 
-  <rewrite>
-    <rules>
+  <!-- <rewrite>  -->
+  <!-- Метатег специально для Firefox -->
+  <!--   <rules>
       <rule name="Set UserAgent">
-        <match url="(.*)" />
+        <match url="(.*)" /> -->
         <conditions>
           <add input="{HTTP_USER_AGENT}" matchType="Pattern" pattern="Mozilla/5.0 \(.*Trident/7.0;.*rv:11.*\).*Gecko" ignoreCase="true" negate="false" />
         </conditions>
-        <serverVariables>
+    <!--     <serverVariables>
           <set name="HTTP_USER_AGENT" value="Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)" />
         </serverVariables>
         <action type="Rewrite" url="{R:0}" />
       </rule>
     </rules>
-  </rewrite>
+  </rewrite> -->
 
-  
+
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 
