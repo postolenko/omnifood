@@ -121,7 +121,7 @@ $(document).ready(function() {
 				$('nav').addClass('nav-position');
 				$('.logo').css({'height': '55px'});
 				$('.mobile-nav-icon').css({'display': 'block'});
-				$('.main-nav').css({'float': 'none',
+				$('.main-nav').css({'float': '',
 									'width': '100%',
 									'overflow': 'auto'
 									});
