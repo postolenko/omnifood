@@ -212,7 +212,7 @@
 @media only screen and (max-width: 580px) { 
 
 	.hero-text {
-		text-align: center;
+		/*text-align: center;*/
 	}
 
 	.steps-box:first-child {
