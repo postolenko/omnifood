@@ -226,7 +226,7 @@ $(document).ready(function() {
 		});
 	});
 
-
+//  показать кнопку прокрутки в вверх страницы
 	function getScrollToTopBtn() {
 		if ($(window).scrollTop() > $('.header').height() ) {
 
@@ -252,23 +252,13 @@ $(document).ready(function() {
 
     });
 
-// checkBrowser();
-//     function checkBrowser(){
- 
+//  Опустил footer вниз на 30px если пользователь использует Firefox.
+//  Правда не по дизайну но такой я нашел подход к этому браузеру.
     f=navigator.userAgent.search("Firefox");
-   
-    
+      
     if(f>-1){
-        brwsr = "Firefox";
+        $('footer').css({'margin-bottom': '-30px'});
     }
-    alert(brwsr);
-    // return brwsr;
-// }
-
-
-// if ($.browser.mozilla) {
-// 	$('footer').css({'margin-bottom': '-30px'});
-// }
 
 });
 
