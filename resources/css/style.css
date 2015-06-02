@@ -382,9 +382,8 @@ header {
     bottom: 30px;
     text-align: center;
     color: #555;
-    /*color: #e67e22;*/
     font-size: 120%;
-    padding: 4px 13px 6px 11px;
+    padding: 4px 12px 6px 12px;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
@@ -817,6 +816,12 @@ footer {
 
 .ion-social-instagram:hover {
     color: #517fa4;
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
 
 footer p {
