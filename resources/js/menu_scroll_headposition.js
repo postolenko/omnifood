@@ -252,6 +252,27 @@ $(document).ready(function() {
 
     });
 
+// checkBrowser();
+//     function checkBrowser(){
+ 
+    f=navigator.userAgent.search("Firefox");
+   
+    
+    if(f>-1){
+        brwsr = "Firefox";
+    }
+    alert(brwsr);
+    // return brwsr;
+// }
+
+
+if ($.browser.mozilla) {
+	alert("Firefox");
+}
+
+// if ( $.browser.webkit ) {
+//     alert( "This is WebKit!" );
+//   }
 
 });
 
