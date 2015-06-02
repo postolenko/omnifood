@@ -255,20 +255,20 @@ $(document).ready(function() {
 // checkBrowser();
 //     function checkBrowser(){
  
-    // f=navigator.userAgent.search("Firefox");
+    f=navigator.userAgent.search("Firefox");
    
     
-    // if(f>-1){
-    //     brwsr = "Firefox";
-    // }
-    // alert(brwsr);
+    if(f>-1){
+        brwsr = "Firefox";
+    }
+    alert(brwsr);
     // return brwsr;
 // }
 
 
-if ($.browser.mozilla) {
-	$('footer').css({'margin-bottom': '-30px'});
-}
+// if ($.browser.mozilla) {
+// 	$('footer').css({'margin-bottom': '-30px'});
+// }
 
 });
 
