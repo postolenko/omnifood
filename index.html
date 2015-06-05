@@ -4,22 +4,7 @@
 <head>
   <meta charset="utf-8">
 
-  <rewrite> <!-- Для Firefox -->
-    <rules>
-      <rule name="Set UserAgent">
-        <match url="(.*)" />
-        <conditions>
-          <add input="{HTTP_USER_AGENT}" matchType="Pattern" pattern="Mozilla/5.0 \(.*Trident/7.0;.*rv:11.*\).*Gecko" ignoreCase="true" negate="false" />
-        </conditions>
-        <serverVariables>
-          <set name="HTTP_USER_AGENT" value="Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)" />
-        </serverVariables>
-        <action type="Rewrite" url="{R:0}" />
-      </rule>
-    </rules>
-  </rewrite>
-
-
+ 
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 
@@ -30,7 +15,7 @@
   <link rel="stylesheet" type="text/css" href="resources/css/style.css">
   <link rel="stylesheet" type="text/css" href="resources/css/responsive.css">
 
-  <!-- <link rel="apple-touch-icon" sizes="57x57" href="resources/favicon/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="57x57" href="resources/favicon/apple-touch-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="resources/favicon/apple-touch-icon-60x60.png">
   <link rel="apple-touch-icon" sizes="72x72" href="resources/favicon/apple-touch-icon-72x72.png">
   <link rel="apple-touch-icon" sizes="76x76" href="resources/favicon/apple-touch-icon-76x76.png">
@@ -44,12 +29,14 @@
   <link rel="icon" type="image/png" href="resources/favicon/favicon-96x96.png" sizes="96x96">
   <link rel="icon" type="image/png" href="resources/favicon/android-chrome-192x192.png" sizes="192x192">
   <link rel="icon" type="image/png" href="resources/favicon/favicon-16x16.png" sizes="16x16">
-  <link rel="manifest" href="resources/favicon/manifest.json"> -->
-  <link rel="icon" href="resources/favicon/favicon.ico" type="image/x-icon">
-  <link rel="shortcut icon" href="resources/favicon/favicon.ico" type="image/x-icon">
-  <!-- <meta name="msapplication-TileColor" content="#da532c">
+  <link rel="manifest" href="resources/favicon/manifest.json">
+  <link rel="shortcut icon" href="resources/img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="resources/img/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="resources/img/favicon.ico" type="image/x-icon">
+
+  <meta name="msapplication-TileColor" content="#da532c">
   <meta name="msapplication-TileImage" content="resources/favicon/mstile-144x144.png">
-  <meta name="msapplication-config" content="resources/favicon/browserconfig.xml"> -->
+  <meta name="msapplication-config" content="resources/favicon/browserconfig.xml">
   <meta name="theme-color" content="#ffffff">
 
   <title>Omnifood</title>
