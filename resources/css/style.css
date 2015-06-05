@@ -4,6 +4,22 @@
 }
 
 /*-------------------------------------------*/
+/* FONTS */
+/*-------------------------------------------*/
+
+@font-face {
+    font-family: 'Lato';
+    src: url('../../vendors/fonts/lato-light-webfont.eot');
+    src: url('../../vendors/fonts/lato-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../vendors/fonts/lato-light-webfont.woff2') format('woff2'),
+         url('../../vendors/fonts/lato-light-webfont.woff') format('woff'),
+         url('../../vendors/fonts/lato-light-webfont.ttf') format('truetype'),
+         url('../../vendors/fonts/lato-light-webfont.svg#latolight') format('svg');
+    font-weight: lighter;
+    font-style: normal;
+}
+
+/*-------------------------------------------*/
 /* BASIC SETUP */
 /*-------------------------------------------*/
 
@@ -18,7 +34,7 @@ html {
     color: #555;
     font-family: "Lato", "Arial", sans-serif;
     font-size: 20px;
-    font-weight: 300;
+    font-weight: 100;
     text-rendering: optimizeLegibility;
 }
 
@@ -75,7 +91,7 @@ textarea {
 h1,
 h2,
 h3 {
-    font-weight: 300;
+    font-weight: normal;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -89,10 +105,11 @@ h1 {
 }
 
 h2 {
-    font-size: 180%;
+    font-size: 160%;
     word-spacing: 2px;
     text-align: center;
     margin-bottom: 30px;
+    font-weight: 100;
 }
 
 h2:after {
@@ -155,7 +172,7 @@ a:visited {
 }
 
 a:hover,
-a:active {   
+a:active {
     color: #e67e22;
 }
 
@@ -216,7 +233,7 @@ input[type=submit] {
 /*-------------------------------------------*/
 
 header {
-    background-image: url(../img/hero.jpg);
+    background-image: url('../img/hero.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -279,8 +296,7 @@ header {
 .logo {
     height: 100px;
     width: auto;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin: 5px 0;
 }
 
 .logo-black {
@@ -383,7 +399,7 @@ header {
     text-align: center;
     color: #555;
     font-size: 120%;
-    padding: 4px 12px 6px 12px;
+    padding: 5px 12px 5px 12px;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
@@ -509,7 +525,7 @@ header {
     height: 55px;
     width: 55px;
     text-align: center;
-    padding: 5px;
+    padding: 7px 5px 3px 5px;
     float: left;
     font-size: 150%;
     margin-right: 25px;
@@ -556,7 +572,7 @@ header {
 /*-------------------------------------------*/
 
 .section-testimonials {
-    background-image: url(../img/back-customers.jpg) ;
+    background-image: url('../img/back-customers.jpg') ;
     background-repeat: repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -849,10 +865,12 @@ footer p {
 }
 
 /*
-    Я скрыл конетент который выходит за пределы окна браузера при загрузке. 
-    Если пользователь будет находиться к примеру по середине всей страницы, загружена будет только верхняя часть контента сайта,
+    Я скрыл контент который выходит за пределы окна браузера при загрузке. 
+    Если пользователь будет находиться к примеру по середине всей страницы, 
+    загружена будет только верхняя часть контента сайта,
     а нижняя от нижнего края окна браузера будет не загруженой.
-    Если пользователь первый раз зашел на сайт или выполнил перезагрузку страницы находясь до этого в header, весь нижний коненте сайта в невидимой для пользователя области загружен не будет.
+    Если пользователь первый раз зашел на сайт или выполнил перезагрузку страницы находясь до этого в header, 
+    весь нижний коненте сайта в невидимой для пользователя области загружен не будет.
 */
 .section-features .row:last-child,
 .section-steps .row:last-child,

@@ -4,7 +4,6 @@ $(document).ready(function() {
 
 	window.logoBoxHeight = $('.logo-box').height();	//изначальная высота блока с классом ".logo-box"
 
-
 // Определение высоты меню в зависимости от количества пунктов, высоты и ширины пунктов меню
 	window.mainNavHeight = ( $('.main-nav a').outerHeight(true) * $('.main-nav a').length ) / Math.floor($('.main-nav').width() / $('.main-nav a').outerWidth(true));
 
@@ -109,6 +108,31 @@ $(document).ready(function() {
 	});
 
 
+// Получение минимальной высоты header и определение координаты положения заголовка .hero-text
+	
+	function getHeadHeaderAndPostionHeadText() {
+
+		$('header, .head').css({'min-height': $(window).height() + "px"});
+
+		if( $("nav").hasClass("nav-position") ) {
+
+			$('.hero-text').css({'padding-top': ( $('header').height() / 2 ) - ( $('.hero-text').height() / 2 ) + 'px'});
+
+		} else {
+
+			$('.hero-text').css({'padding-top': ( $('header').height() / 2 ) - ( $('.hero-text').height() / 2 ) - logoBoxHeight + 'px'});
+
+		}
+
+		if( $(window).height() <= ( logoBoxHeight + $('.hero-text').outerHeight() ) ) {
+
+			$('header, .head').css({'min-height': $(window).height() + logoBoxHeight + "px"});
+			$('.hero-text').css({'padding-top': logoBoxHeight + 'px'});
+
+		}
+
+	}
+
 
 //  Создание адаптивного меню
 	function makeResponsiveNav(showhoverrespnav) {
@@ -182,32 +206,6 @@ $(document).ready(function() {
 	}
 
 
-// Получение минимальной высоты header и определение координаты положения заголовка .hero-text
-	
-	function getHeadHeaderAndPostionHeadText() {
-
-		$('header, .head').css({'min-height': $(window).height() + "px"});
-
-		if( $("nav").hasClass("nav-position") ) {
-
-			$('.hero-text').css({'padding-top': ( $('header').height() / 2 ) - ( $('.hero-text').height() / 2 ) + 'px'});
-
-		} else {
-
-			$('.hero-text').css({'padding-top': ( $('header').height() / 2 ) - ( $('.hero-text').height() / 2 ) - logoBoxHeight + 'px'});
-
-		}
-
-		if( $(window).height() <= ( logoBoxHeight + $('.hero-text').outerHeight() ) ) {
-
-			$('header, .head').css({'min-height': $(window).height() + logoBoxHeight + "px"});
-			$('.hero-text').css({'padding-top': logoBoxHeight + 'px'});
-
-		}
-
-	}
-
-
 	// Navigation scroll
 
 	$(function() {
@@ -256,7 +254,7 @@ $(document).ready(function() {
 //  Правда не по дизайну но такой я нашел подход к этому браузеру.
     f=navigator.userAgent.search("Firefox");
       
-    if(f>-1){
+    if( f > -1 ){
         $('footer').css({'margin-bottom': '-30px'});
     }
 

@@ -40,7 +40,6 @@
 	.works-step-number {
 		height: 50px;
 		width: 50px;
-		padding: 5px;
 	}
 
 	.works-step:last-of-type {
@@ -81,7 +80,6 @@
 	.works-step-number {
 		height: 45px;
 		width: 45px;
-		padding: 2px;
 	}
 
 	.btn-app img {
@@ -191,7 +189,6 @@
 		height: 40px;
 		width: 40px;
 		margin-right: 15px;
-		padding: 2px 3px 2px 1px;
 	}
 
 	.works-step:last-of-type {

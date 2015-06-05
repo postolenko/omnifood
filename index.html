@@ -4,21 +4,20 @@
 <head>
   <meta charset="utf-8">
 
-  <!-- <rewrite>  -->
-  <!-- Метатег специально для Firefox -->
-  <!--   <rules>
+  <rewrite> <!-- Для Firefox -->
+    <rules>
       <rule name="Set UserAgent">
-        <match url="(.*)" /> -->
+        <match url="(.*)" />
         <conditions>
           <add input="{HTTP_USER_AGENT}" matchType="Pattern" pattern="Mozilla/5.0 \(.*Trident/7.0;.*rv:11.*\).*Gecko" ignoreCase="true" negate="false" />
         </conditions>
-    <!--     <serverVariables>
+        <serverVariables>
           <set name="HTTP_USER_AGENT" value="Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)" />
         </serverVariables>
         <action type="Rewrite" url="{R:0}" />
       </rule>
     </rules>
-  </rewrite> -->
+  </rewrite>
 
 
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -30,8 +29,6 @@
   <link rel="stylesheet" type="text/css" href="vendors/css/ionicons.css">
   <link rel="stylesheet" type="text/css" href="resources/css/style.css">
   <link rel="stylesheet" type="text/css" href="resources/css/responsive.css">
-
-  <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,300italic' rel='stylesheet' type='text/css'>
 
   <link rel="apple-touch-icon" sizes="57x57" href="resources/favicon/apple-touch-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="resources/favicon/apple-touch-icon-60x60.png">
@@ -61,14 +58,14 @@
 
   <header ><!-- header -->
 
-    <div class="head clearfix"> <!-- Знаю что это может быть лишний div - смотрите примечание в style.css строка 240 -->
+    <div class="head clearfix"> <!-- Знаю что это может быть лишний div - смотрите примечание в style.css строка 257 -->
 
       <nav>
 
         <div class="row logo-nav-box clearfix">
 
           <div class="logo-box">
-          
+            
             <a href="#"><img class="logo" src="resources/img/logo-white.png" alt="omnifood" /></a>
             <a class="mobile-nav-icon">MENU</a>
 
@@ -116,7 +113,7 @@
 
       <div class="col box">
        <i class="ion-heart icon-big"></i>
-       <h3>Up&nbsp;to&nbsp;365&nbsp;days/year</h3>
+       <h3>Up&nbsp;to&nbsp;365 days/year</h3>
        <p class="long-copy">Never cook again! We&nbsp;really mean that. Our subscription plans include up&nbsp;to&nbsp;365&nbsp;days/year coverage. You can also choose to&nbsp;order more flexibly if&nbsp;that&rsquo;s your style.</p>
      </div>
 
