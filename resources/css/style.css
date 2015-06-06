@@ -744,10 +744,18 @@ cite img {
     margin: 10px 5px 10px 20px;
 }
 
-.sent-it-submit {
-    padding: 10px 60px !important;
+.sent-it-submit:link,
+.sent-it-submit:visited{
+    background-color: #e67e22;
+    border: 1px solid #e67e22;
+    color: #fff;
+    padding: 10px 160px;
 }
 
+.sent-it-submit:hover,
+.sent-it-submit:active {
+    background-color: #D07017;
+}
 
 /*-------------------------------------------*/
 /* FOOTER */

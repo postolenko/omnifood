@@ -6,8 +6,9 @@ $(document).ready(function() {
 
 // Определение высоты меню в зависимости от количества пунктов, высоты и ширины пунктов меню
 	window.mainNavHeight = ( $('.main-nav a').outerHeight(true) * $('.main-nav a').length ) / Math.floor($('.main-nav').width() / $('.main-nav a').outerWidth(true));
-
+	
 	responsivenavNeed();
+	showContent();
 	getHeadHeaderAndPostionHeadText();
 
 // Определение необходимости показа меню и положение заголовка .hero-text в header при изменении размеров окна пользователем 
@@ -40,44 +41,8 @@ $(document).ready(function() {
 
 
 	
-	// Если контент данной секции попадает в окно браузера то я его отображаю уменьшая прозрачность  
-		
-		if( $(".section-features").get(0).getBoundingClientRect().top <= $(window).height() && $(".section-features .row:eq(1)").css('opacity') != 1 ) {
-
-			$(".section-features .row:eq(1)").animate({opacity:1},1000);
-
-		}
-
-		if( $(".section-steps").get(0).getBoundingClientRect().top <= $(window).height() && $(".section-steps .row:eq(1)").css('opacity') != 1 ) {
-
-			$(".section-steps .row:eq(1)").animate({opacity:1},1000);
-
-		}
-
-		if( $(".section-cities").get(0).getBoundingClientRect().top <= $(window).height() && $(".section-cities .row:eq(1)").css('opacity') != 1) {
-
-			$(".section-cities .row:eq(1)").animate({opacity:1},1000);
-
-		}
-
-		if( $(".section-testimonials").get(0).getBoundingClientRect().top <= $(window).height() && $(".testimonials").css('opacity') != 1) {
-
-			$(".testimonials").animate({opacity:1},1000);
-
-		}
-
-		if( $(".section-plans").get(0).getBoundingClientRect().top <= $(window).height() && $(".section-plans .row:eq(1)").css('opacity') != 1) {
-
-			$(".section-plans .row:eq(1)").animate({opacity:1},1000);
-
-		}
-
-		if( $(".section-form").get(0).getBoundingClientRect().top <= $(window).height() && $(".section-form .row:eq(1)").css('opacity') != 1) {
-
-			$(".section-form .row:eq(1)").animate({opacity:1},1000);
-
-		}
-
+	// Если контент данной секции попадает в окно браузера то я его отображаю уменьшая прозрачность 
+		showContent();
 
 	});
 
@@ -107,6 +72,46 @@ $(document).ready(function() {
 
 	});
 
+// Анимация при прокрутке и при загрузке
+		function showContent() {
+
+			if( $(".section-features").get(0).getBoundingClientRect().top <= $(window).height() && $(".section-features .row:eq(1)").css('opacity') != 1 ) {
+
+				$(".section-features .row:eq(1)").animate({opacity:1},1000);
+
+			}
+
+			if( $(".section-steps").get(0).getBoundingClientRect().top <= $(window).height() && $(".section-steps .row:eq(1)").css('opacity') != 1 ) {
+
+				$(".section-steps .row:eq(1)").animate({opacity:1},1000);
+
+			}
+
+			if( $(".section-cities").get(0).getBoundingClientRect().top <= $(window).height() && $(".section-cities .row:eq(1)").css('opacity') != 1) {
+
+				$(".section-cities .row:eq(1)").animate({opacity:1},1000);
+
+			}
+
+			if( $(".section-testimonials").get(0).getBoundingClientRect().top <= $(window).height() && $(".testimonials").css('opacity') != 1) {
+
+				$(".testimonials").animate({opacity:1},1000);
+
+			}
+
+			if( $(".section-plans").get(0).getBoundingClientRect().top <= $(window).height() && $(".section-plans .row:eq(1)").css('opacity') != 1) {
+
+				$(".section-plans .row:eq(1)").animate({opacity:1},1000);
+
+			}
+
+			if( $(".section-form").get(0).getBoundingClientRect().top <= $(window).height() && $(".section-form .row:eq(1)").css('opacity') != 1) {
+
+				$(".section-form .row:eq(1)").animate({opacity:1},1000);
+
+			}
+
+		}
 
 // Получение минимальной высоты header и определение координаты положения заголовка .hero-text
 	
