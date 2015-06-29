@@ -278,8 +278,15 @@
 
 @media only screen and (max-width: 480px) {
 
-.works-step-description {
-		width: 70%;
+	.works-step-number {
+		height: 35px;
+		width: 35px;
+		margin-right: 9px;
+		padding: 3px 5px 3px 4px;
+	}
+
+	.works-step-description {
+		width: 75%;
 	}	
 
 }
