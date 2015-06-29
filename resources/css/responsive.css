@@ -274,3 +274,12 @@
 	}
 
 }
+
+
+@media only screen and (max-width: 480px) {
+
+.works-step-description {
+		width: 70%;
+	}	
+
+}
