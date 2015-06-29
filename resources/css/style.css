@@ -413,7 +413,6 @@ header {
     background: -o-linear-gradient(left, rgba(0,0,0,0.4) 0%,rgba(0,0,0,0.4) 100%);
     background: -ms-linear-gradient(left, rgba(0,0,0,0.4) 0%,rgba(0,0,0,0.4) 100%);
     background: linear-gradient(to right, rgba(0,0,0,0.4) 0%,rgba(0,0,0,0.4) 100%);
-   
 }
 
 
@@ -572,8 +571,8 @@ header {
 /*-------------------------------------------*/
 
 .section-testimonials {
-    background-image: url('../img/back-customers.jpg') ;
-    background-repeat: repeat;
+    background-image: url(../img/back-customers.jpg) ;
+    background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     color: #fff;
