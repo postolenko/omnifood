@@ -14,4 +14,4 @@
 
 Cross-browser compatibility IE9+, Safari 5+.
 Min-width 224px.
-Max speed download 4 seconds.
+Max speed download 4 seconds. Really 2 seconds usually is enough.
