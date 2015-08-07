@@ -875,7 +875,6 @@ footer p {
     padding: 10px 0 15px 0;
     height: 110px;
     background: rgba(150, 150, 150, .7);
-    opacity: .5;
     font-size: 15px;
     line-height: 15px;
     font-weight: bold;
@@ -906,7 +905,6 @@ footer p {
 .author-link:hover {
     width: 300px;
     background: rgba(0, 0, 0, .9);
-    opacity: 1;
 }
 
 .author-link-hd {
@@ -946,5 +944,5 @@ footer p {
 
 .author-site:hover,
 .skype-author:hover {
-    color: #3300FF;
+    color: #0066FF;
 }
